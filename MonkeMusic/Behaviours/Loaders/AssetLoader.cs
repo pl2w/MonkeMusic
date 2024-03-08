@@ -19,7 +19,7 @@ namespace MonkeMusic.Behaviours.Loaders
 
         private void LoadBundle()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("GorillaMusic.Resources.music");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("MonkeMusic.Resources.music");
             bundle = AssetBundle.LoadFromStream(stream);
         }
     }
