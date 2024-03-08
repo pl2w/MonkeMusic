@@ -1,18 +1,15 @@
-﻿using Photon.Pun;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using UnityEngine;
 
-namespace CustomMusic.Behaviours.Buttons
+namespace GorillaMusic.Behaviours.Buttons
 {
     public class PressableButton : MonoBehaviour
     {
         public Action OnPress;
         float touchTime;
         float debounceTime = 0.2f;
+
+        public PressableButton() => gameObject.layer = 18;
 
         public void OnTriggerEnter(Collider collider)
         {

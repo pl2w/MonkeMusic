@@ -1,6 +1,4 @@
-﻿using BepInEx;
-using CustomMusic.Behaviours;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +8,7 @@ using UnityEngine.Networking;
 using Zenject;
 using Debug = UnityEngine.Debug;
 
-namespace CustomMusic
+namespace GorillaMusic.Behaviours.Loaders
 {
     //https://forum.unity.com/threads/load-mp3-from-user-file-at-runtime-windows.589138/
     public class AudioLoader : MonoBehaviour, IInitializable
@@ -34,9 +32,19 @@ namespace CustomMusic
         };
 
         public bool songsLoaded;
+        int _songLoadIndex = 0;
+
+        [Inject]
+        public MusicPlayer _player;
+
+        bool init;
 
         public void Initialize()
         {
+            if (init)
+                return;
+
+            init = true;
             GetSongsFromFolder();
         }
 
@@ -104,6 +112,11 @@ namespace CustomMusic
 
             songs.Add(new Song(clip, clip.name, groupName));
             webRequest.Dispose();
+
+            if (_songLoadIndex == 0)
+                _player.GotoSong(0);
+
+            _songLoadIndex++;
         }
     }
 }

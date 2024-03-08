@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace CustomMusic.Behaviours
+namespace GorillaMusic.Behaviours.Loaders
 {
     public class AssetLoader
     {
@@ -19,7 +19,7 @@ namespace CustomMusic.Behaviours
 
         private void LoadBundle()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("CustomMusic.Resources.music");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("GorillaMusic.Resources.music");
             bundle = AssetBundle.LoadFromStream(stream);
         }
     }
