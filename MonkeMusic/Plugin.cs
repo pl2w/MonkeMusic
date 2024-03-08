@@ -1,11 +1,10 @@
 ﻿using BepInEx;
 using Bepinject;
-using GorillaMusic;
-using GorillaMusic.Behaviours.Loaders;
+using MonkeMusic.Behaviours.Loaders;
 
-namespace CustomMusic
+namespace MonkeMusic
 {
-    [BepInPlugin("pl2w.gorillamusic", "GorillaMusic", "1.0.0")]
+    [BepInPlugin("pl2w.monkemusic", "MonkeMusic", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
         public Plugin()

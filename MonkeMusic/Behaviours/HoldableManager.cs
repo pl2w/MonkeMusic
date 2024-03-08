@@ -1,10 +1,10 @@
-﻿using GorillaMusic.Behaviours.Buttons;
-using GorillaMusic.Behaviours.Loaders;
+﻿using MonkeMusic.Behaviours.Buttons;
+using MonkeMusic.Behaviours.Loaders;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace GorillaMusic.Behaviours
+namespace MonkeMusic.Behaviours
 {
     public class HoldableManager : MonoBehaviour, IInitializable
     {

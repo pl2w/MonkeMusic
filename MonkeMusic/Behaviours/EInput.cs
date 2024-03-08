@@ -1,4 +1,4 @@
-﻿namespace GorillaMusic.Behaviours
+﻿namespace MonkeMusic.Behaviours
 {
     public enum EInput
     {

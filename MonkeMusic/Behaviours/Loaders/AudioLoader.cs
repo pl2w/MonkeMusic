@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using Zenject;
 using Debug = UnityEngine.Debug;
 
-namespace GorillaMusic.Behaviours.Loaders
+namespace MonkeMusic.Behaviours.Loaders
 {
     //https://forum.unity.com/threads/load-mp3-from-user-file-at-runtime-windows.589138/
     public class AudioLoader : MonoBehaviour, IInitializable

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GorillaMusic.Behaviours.Buttons
+namespace MonkeMusic.Behaviours.Buttons
 {
     public class PressableButton : MonoBehaviour
     {

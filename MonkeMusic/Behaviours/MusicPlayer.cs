@@ -1,8 +1,8 @@
-﻿using GorillaMusic.Behaviours.Loaders;
+﻿using MonkeMusic.Behaviours.Loaders;
 using UnityEngine;
 using Zenject;
 
-namespace GorillaMusic.Behaviours
+namespace MonkeMusic.Behaviours
 {
     public class MusicPlayer : MonoBehaviour, IInitializable
     {

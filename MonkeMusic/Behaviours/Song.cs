@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GorillaMusic.Behaviours
+namespace MonkeMusic.Behaviours
 {
     public class Song
     {

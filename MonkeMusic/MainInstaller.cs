@@ -1,9 +1,9 @@
-﻿using GorillaMusic.Behaviours;
-using GorillaMusic.Behaviours.Loaders;
+﻿using MonkeMusic.Behaviours;
+using MonkeMusic.Behaviours.Loaders;
 using UnityEngine;
 using Zenject;
 
-namespace GorillaMusic
+namespace MonkeMusic
 {
     public class MainInstaller : Installer
     {

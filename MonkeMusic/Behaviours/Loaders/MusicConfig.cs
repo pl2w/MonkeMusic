@@ -1,6 +1,6 @@
 ﻿using BepInEx.Configuration;
 
-namespace GorillaMusic.Behaviours.Loaders
+namespace MonkeMusic.Behaviours.Loaders
 {
     public static class MusicConfig
     {

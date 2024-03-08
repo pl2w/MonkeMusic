@@ -7,8 +7,8 @@
     <ProjectGuid>{920D58B4-E536-4035-AAD7-4273E60A9EA9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GorillaMusic</RootNamespace>
-    <AssemblyName>GorillaMusic</AssemblyName>
+    <RootNamespace>MonkeMusic</RootNamespace>
+    <AssemblyName>MonkeMusic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,7 +42,6 @@
     <Compile Include="MainInstaller.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\CoroutineWithData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Directory.Build.props" />
