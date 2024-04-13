@@ -1,3 +1,6 @@
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/pl2w/MonkeMusic/total)
+
+
 # Monke Music
 
 This mod allows you to listen to custom music in Gorilla Tag!
