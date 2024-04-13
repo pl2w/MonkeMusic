@@ -1,10 +1,6 @@
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/pl2w/MonkeMusic/total)
-
-
 # Monke Music
-
-This mod allows you to listen to custom music in Gorilla Tag!
-
+This mod allows you to listen to custom music in Gorilla Tag!\
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/pl2w/MonkeMusic/total)
 ## Dependencies
 The mod requires [Bepinject](https://github.com/Auros/Bepinject/releases) and [Extenject](https://github.com/Auros/Bepinject/releases) (both of them are available on the same releases page).\
 You can install both of them from Github or [Monke Mod Manager](https://github.com/BzzzThe18th/MonkeModManager)
