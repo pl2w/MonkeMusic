@@ -44,7 +44,7 @@ namespace MonkeMusic.Behaviours
         private void AddToRig(VRRig rig)
         {
             holdable = Instantiate(assetLoader.LoadAsset<GameObject>("HoldableMusic"));
-            holdable.transform.parent = GameObject.Find("Local Gorilla Player/rig/body/shoulder.L/upper_arm.L/forearm.L/hand.L/").transform;
+            holdable.transform.parent = rig.transform.Find("rig/body/shoulder.L/upper_arm.L/forearm.L/hand.L/").transform;
             holdable.transform.localPosition = new Vector3(-0.09f, 0.08f, 0.02f);
             holdable.transform.localEulerAngles = new Vector3(0f, 270f, 317.5f);
             holdable.transform.localScale = new Vector3(0.035f, 0.035f, 0.035f);
