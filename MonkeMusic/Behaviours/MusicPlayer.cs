@@ -30,7 +30,6 @@ namespace MonkeMusic.Behaviours
             audioSource = GorillaLocomotion.Player.Instance.headCollider.gameObject.AddComponent<AudioSource>();
         }
 
-
         public void ChangeSong(bool next)
         {
             if (next && currentSongIndex + 1 < audioLoader.songs.Count)

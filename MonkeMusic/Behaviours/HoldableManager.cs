@@ -1,5 +1,6 @@
 ﻿using MonkeMusic.Behaviours.Buttons;
 using MonkeMusic.Behaviours.Loaders;
+using System;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -15,9 +16,9 @@ namespace MonkeMusic.Behaviours
             loopText;
 
         public MusicPlayer musicPlayer;
-        bool init;
+        public AssetLoader assetLoader;
 
-        public void Initialize() { }
+        bool init;
 
         [Inject]
         public void CreateHoldable(AssetLoader assetLoader, MusicPlayer musicPlayer)
@@ -27,9 +28,23 @@ namespace MonkeMusic.Behaviours
 
             init = true;
             this.musicPlayer = musicPlayer;
+            this.assetLoader = assetLoader;
 
+            //bandaid fix, too lazy to properly fix :shrug:
+            VRRig[] rigs = GameObject.FindObjectsOfType<VRRig>();
+            for (int i = 0; i < rigs.Length; i++)
+            {
+                if (rigs[i].isOfflineVRRig)
+                {
+                    AddToRig(rigs[i]);
+                }
+            }
+        }
+
+        private void AddToRig(VRRig rig)
+        {
             holdable = Instantiate(assetLoader.LoadAsset<GameObject>("HoldableMusic"));
-            holdable.transform.parent = GameObject.Find("Player Objects/Local VRRig/Local Gorilla Player/rig/body/shoulder.L/upper_arm.L/forearm.L/hand.L/").transform;
+            holdable.transform.parent = GameObject.Find("Local Gorilla Player/rig/body/shoulder.L/upper_arm.L/forearm.L/hand.L/").transform;
             holdable.transform.localPosition = new Vector3(-0.09f, 0.08f, 0.02f);
             holdable.transform.localEulerAngles = new Vector3(0f, 270f, 317.5f);
             holdable.transform.localScale = new Vector3(0.035f, 0.035f, 0.035f);
@@ -95,5 +110,7 @@ namespace MonkeMusic.Behaviours
 
             return false;
         }
+
+        public void Initialize() { }
     }
 }
